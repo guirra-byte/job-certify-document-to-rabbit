@@ -14,7 +14,7 @@ const db = knex({
 })
 
 const generateData = async (maxGen = 100) => {
-  for(let i = 0; i < maxGen; i++) {
+  for (let i = 0; i < maxGen; i++) {
     await db('certify_documents').insert({
       id: randomUUID(),
       user_id: randomUUID(),
